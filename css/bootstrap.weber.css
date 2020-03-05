@@ -649,8 +649,62 @@ pre code {
 
 
 /*----------------------------------------------------------------------------------------
+                                    VIDEO SELECT
+-----------------------------------------------------------------------------------------*/
+
+#container {
+  position: relative;
+}
+
+video {
+  width: 350px;
+  border-radius: 6px;
+}
+
+#changeVideoA {
+  position: absolute;
+  top: 470px;
+  left: 130px;
+  width: 120px;
+  height: 35px;
+  opacity: 1;
+  transition: opacity .3s ease;
+  cursor: pointer;
+  
+  /* Additional styles just to increase visual appeal */
+  border-radius: 6px;
+  background: #FFFFFFDD;
+  color: black;
+  font-weight: medium;
+  line-height: 25px;
+  text-align: center;
+  /* End */
+}
+
+#changeVideoB {
+  position: absolute;
+  top: 470px;
+  right: 130px;
+  width: 120px;
+  height: 35px;
+  opacity: 1;
+  transition: opacity .3s ease;
+  cursor: pointer;
+  
+  /* Additional styles just to increase visual appeal */
+  border-radius: 6px;
+  background: #FFFFFFDD;
+  color: black;
+  font-weight: medium;
+  line-height: 25px;
+  text-align: center;
+  /* End */
+}
+
+/*----------------------------------------------------------------------------------------
                                     GRID
 -----------------------------------------------------------------------------------------*/
+
 
 .container {
     width: 100%;

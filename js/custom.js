@@ -28,6 +28,36 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     });
 }
 
+//------------------------------------------------------------------------
+//                      VIDEO SELECT OPTIONS
+//------------------------------------------------------------------------
+
+
+const video = document.querySelector('video')
+const source = document.querySelector('source')
+
+video.appendChild(source)
+video.play()
+
+const changeVideoButtonA = document.querySelector('#changeVideoA')
+changeVideoA.addEventListener('click', e => {
+  video.pause()
+  
+  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_01A.mp4')
+  
+  video.load()
+  video.play()
+})
+
+const changeVideoButtonB = document.querySelector('#changeVideoB')
+changeVideoB.addEventListener('click', e => {
+  video.pause()
+  
+  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_01B.mp4')
+  
+  video.load()
+  video.play()
+})
 
 //------------------------------------------------------------------------
 //						SHOW NAVIGATION ON SCROLL DOWN
