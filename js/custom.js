@@ -46,7 +46,11 @@ changeVideoA.addEventListener('click', e => {
   source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_01A.mp4')
   
   video.load()
-  video.play()
+  video.play();
+
+    $('#changeVideoA').hide();
+  $('#changeVideoB').hide();
+    $('#changeVideoC').show();
 })
 
 const changeVideoButtonB = document.querySelector('#changeVideoB')
@@ -57,7 +61,27 @@ changeVideoB.addEventListener('click', e => {
   
   video.load()
   video.play()
+  $('#changeVideoA').hide();
+  $('#changeVideoB').hide();
+    $('#changeVideoC').show();
+
+});
+
+const changeVideoButtonC = document.querySelector('#changeVideoC')
+changeVideoC.addEventListener('click', e => {
+  video.pause()
+  
+  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_000.mp4')
+  
+  video.load()
+  video.play();
+      $('#changeVideoC').hide();
+
+  $('#changeVideoA').show();
+  $('#changeVideoB').show();
+
 })
+
 
 //------------------------------------------------------------------------
 //						SHOW NAVIGATION ON SCROLL DOWN
