@@ -4472,6 +4472,7 @@ hr.sep-vertical-x2 {
 .rounded {
     border-radius: 1em !important;
     position: relative;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -4484,7 +4485,6 @@ hr.sep-vertical-x2 {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  position:relative;
 }
 
 .rounded-circle img{
@@ -4499,7 +4499,35 @@ hr.sep-vertical-x2 {
     border-radius: 0 !important;
 }
 
+.circular-landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
 
+.circular-landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+
+
+.circular-portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-portrait img {
+  width: 100%;
+  height: auto;
+}
 
 /*----------------------------------------------------------------------------------------
                                     DISPLAY
