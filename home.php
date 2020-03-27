@@ -60,7 +60,12 @@
 
                             <h3>Username: <?php echo $_GET["un"]; ?><br>
                             Your id is: <?php echo $_GET["id"]; ?></h3>
-                            
+
+                            <?php 
+                            if (isset($_GET['un'])) {
+                             echo $_GET['un']; 
+                         }
+
                 			<h3><strong class="">HeartLover</strong></h3>
                 			<svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 100 20" width="100" class="mb-30 svg-secondary"><path d="m0 9h100v2h-100z" fill-rule="evenodd"></path></svg>
 
