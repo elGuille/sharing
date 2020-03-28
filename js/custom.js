@@ -29,6 +29,42 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 //------------------------------------------------------------------------
+//                      PROFILE PIC
+//------------------------------------------------------------------------
+
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+const un = urlParams.get('un')
+console.log(un);
+// username
+
+const pp = urlParams.get('pp')
+console.log(pp);
+// product picture
+
+const id = urlParams.get('id')
+console.log(id);
+// post id
+
+const c = urlParams.get('c')
+console.log(c);
+// caption
+
+const opA = urlParams.get('01a')
+console.log(opA);
+// option A
+
+
+const opB = urlParams.get('01b')
+console.log(opB);
+// option B
+
+
+
+//------------------------------------------------------------------------
 //                      VIDEO SELECT OPTIONS
 //------------------------------------------------------------------------
 
