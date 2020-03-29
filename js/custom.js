@@ -194,3 +194,36 @@ var pAgree = '1';
 window.addEventListener('load', function() {
 	$('a.smooth').smoothScroll({speed: 800});
 });
+
+$(function(){
+  var user  = getUrlParam('u');
+  var profile_pic = getUrlParam('pp');
+  var pid = getUrlParam('p_id');
+  var vd = getUrlParam('vd');
+  var opt_a = getUrlParam('opt_a');
+    var opt_b = getUrlParam('opt_b');
+
+  $('#changeVideoA').html(decodeURI(opt_a));
+   $('#changeVideoB').html(decodeURI(opt_b));
+   $('#imgid').attr('src',decodeURI(profile_pic));
+   $('#suser').html(decodeURI(user));
+   $('#udesc').html(decodeURI(vd));
+   // $('#udesc').html(vd);
+
+})
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+}

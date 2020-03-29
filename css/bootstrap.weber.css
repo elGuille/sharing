@@ -673,7 +673,9 @@ video {
   opacity: 1;
   transition: opacity .3s ease;
   cursor: pointer;
-  
+      text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   /* Additional styles just to increase visual appeal */
   border-radius: 6px;
   background: #FFFFFFDD;
@@ -695,7 +697,9 @@ video {
     opacity: 1;
   transition: opacity .3s ease;
   cursor: pointer;
-  
+      text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   /* Additional styles just to increase visual appeal */
   border-radius: 6px;
   background: #FFFFFFDD;
