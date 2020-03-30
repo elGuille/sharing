@@ -197,9 +197,9 @@ window.addEventListener('load', function() {
 
 $(function(){
   var user  = getUrlParam('u');
-  var profile_pic = getUrlParam('pp');
-  var pid = getUrlParam('p_id');
-  var vd = getUrlParam('vd');
+  var profile_pic = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/profilePics/'+getUrlParam('pp')+'.jpeg';
+  var pid = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_000.mp4';
+  var vd =  getUrlParam('vd');
   var opt_a = getUrlParam('opt_a');
     var opt_b = getUrlParam('opt_b');
 
@@ -208,6 +208,16 @@ $(function(){
    $('#imgid').attr('src',decodeURI(profile_pic));
    $('#suser').html(decodeURI(user));
    $('#udesc').html(decodeURI(vd));
+   var video = $('video#vid1');
+   console.log(pid);
+   var source = document.createElement('source');
+    source.setAttribute('src',pid);
+    $(video).html(source);
+    $("#vid1")[0].load();
+   // video.pause();
+   // $('video#vid1').find('source').attr('src',pid);
+   // video.load();
+   // video.play();
    // $('#udesc').html(vd);
 
 })
