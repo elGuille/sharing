@@ -78,8 +78,8 @@ video.play()
 const changeVideoButtonA = document.querySelector('#changeVideoA')
 changeVideoA.addEventListener('click', e => {
   video.pause()
-  
-  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_01A.mp4')
+   var videoA =  $('input#videoA').val();
+  source.setAttribute('src',videoA)
   
   video.load()
   video.play();
@@ -92,9 +92,9 @@ changeVideoA.addEventListener('click', e => {
 const changeVideoButtonB = document.querySelector('#changeVideoB')
 changeVideoB.addEventListener('click', e => {
   video.pause()
-  
-  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_01B.mp4')
-  
+  var videoB =  $('input#videoB').val();
+  source.setAttribute('src', videoB);
+ 
   video.load()
   video.play()
   $('#changeVideoA').hide();
@@ -106,8 +106,8 @@ changeVideoB.addEventListener('click', e => {
 const changeVideoButtonC = document.querySelector('#changeVideoC')
 changeVideoC.addEventListener('click', e => {
   video.pause()
-  
-  source.setAttribute('src', 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/1579604656_kali/1579604656_kali_000.mp4')
+  var videoC =  $('input#videoC').val();
+  source.setAttribute('src', videoC)
   
   video.load()
   video.play();
@@ -199,6 +199,9 @@ $(function(){
   var user  = getUrlParam('u');
   var profile_pic = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/profilePics/'+getUrlParam('pp')+'.jpeg';
   var pid = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_000.mp4';
+   var pid_b = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01a.mp4';
+   var pid_c = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01b.mp4';
+
   var vd =  getUrlParam('vd');
   var opt_a = getUrlParam('opt_a');
     var opt_b = getUrlParam('opt_b');
@@ -211,9 +214,18 @@ $(function(){
    var video = $('video#vid1');
    console.log(pid);
    var source = document.createElement('source');
+        console.log(pid);
+
     source.setAttribute('src',pid);
-    $(video).html(source);
+       $(video).html(source);
     $("#vid1")[0].load();
+    $('input#videoA').val(pid_a);
+    $('input#videoB').val(pid_b);
+    $('input#videoC').val(pid_c);
+
+    // setTimeout(function(){
+ 
+    // },1000);
    // video.pause();
    // $('video#vid1').find('source').attr('src',pid);
    // video.load();
