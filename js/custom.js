@@ -207,10 +207,10 @@ window.addEventListener('load', function() {
 
 $(function(){
   var user  = getUrlParam('u');
-  var profile_pic = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/profilePics/'+getUrlParam('pp')+'.jpeg';
-  var pid = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_000.mp4';
-   var pid_b = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01A.mp4';
-   var pid_c = 'https://yoa-yoaenviron.s3-ap-northeast-1.amazonaws.com/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01B.mp4';
+  var profile_pic = 'https://d2gwdfqjh6f8qk.cloudfront.net/profilePics/'+getUrlParam('pp')+'.jpeg';
+  var pid = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_000.mp4';
+   var pid_b = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01A.mp4';
+   var pid_c = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01B.mp4';
 
   var vd =  getUrlParam('vd');
   var opt_a = getUrlParam('opt_a');
