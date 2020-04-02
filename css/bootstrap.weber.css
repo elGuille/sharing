@@ -659,13 +659,16 @@ pre code {
 video {
   width: 100%;
   max-width: 350px;
+  min-width: 350px;
   border-radius: 6px;
+      min-height: 600px;
+      margin-left: 80%;
 }
 
 #changeVideoA {
   position: absolute;
   top: 72%;
-  left: 20%;
+  left: 92%;
   max-width: 100px;     
   margin-left: -17px;
   width: 100%;
@@ -689,7 +692,7 @@ video {
 #changeVideoB {
   position: absolute;
     top: 72%;
-    right: 20%;
+    right: -70%;
     width: 100%;
     max-width: 100px;
     margin-right: -10px;
@@ -713,7 +716,8 @@ video {
 #changeVideoC {
   position: absolute;
     top: 72%;
-    right: 38%;
+    right: -44%;
+
     width: 100%;
     max-width: 100px;
     margin-right: -10px;

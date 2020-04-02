@@ -229,6 +229,7 @@ $(function(){
     source.setAttribute('src',pid);
        $(video).html(source);
     $("#vid1")[0].load();
+     $("#vid1")[0].play();
     $('input#videoB').val(pid_c);
     $('input#videoA').val(pid_b);
     $('input#videoC').val(pid);
