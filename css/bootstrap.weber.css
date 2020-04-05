@@ -775,6 +775,7 @@ video {
             right: 29%!important;
     }
 
+ 
 }
 
 @media (min-width: 768px) {
@@ -4737,7 +4738,30 @@ hr.sep-vertical-x2 {
     }
 }
 
+@media (max-width: 500px)  {
+   .rounded img{
+            margin: 0 auto;
+            display: block;
+    }
 
+    h3{
+        text-align: center;
+    }
+
+    .dark svg.svg-secondary.light, .light svg.svg-secondary, .dark .light svg.svg-secondary, svg.svg-secondary.light{
+        margin: 0 auto;
+        display: block;
+    }
+
+    .mb-30{
+        text-align: center;
+    }
+    .dark .btn.light, .light .btn, .dark .light .btn, .btn.light{
+        margin: 0 auto;
+        display: block;
+    }
+}
+}
 
 
 /*----------------------------------------------------------------------------------------
@@ -8919,3 +8943,8 @@ p.chart-line {
     }
 }
 
+
+
+.rounded img{
+        border-radius: 100%;
+}
