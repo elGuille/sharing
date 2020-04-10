@@ -211,6 +211,7 @@ $(function(){
   var pid = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_000.mp4';
    var pid_b = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01A.mp4';
    var pid_c = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_01B.mp4';
+  var cover_pic = 'https://d2gwdfqjh6f8qk.cloudfront.net/'+ getUrlParam('p_id')+'/'+getUrlParam('p_id')+'_thumbImage.jpg';
 
   var vd =  getUrlParam('vd');
   var opt_a = getUrlParam('opt_a');
@@ -225,7 +226,7 @@ $(function(){
    console.log(pid);
    var source = document.createElement('source');
         console.log(pid);
-
+      $(video).attr('poster',cover_pic);
     source.setAttribute('src',pid);
        $(video).html(source);
     $("#vid1")[0].load();
